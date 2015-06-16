@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+{% block content %}
+{% raw %}
+<style>
+    .choose{
+        width: 270px;
+        height: 344px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #fff;
+    }
+    .card{
+        background-image: url('/images/card.png');
+    }
+    .rock{
+        background-image: url('/images/rock.png');
+    }
+    .scissors{
+        background-image: url('/images/scissors.png');
+    }
+</style>
+<section data-ng-controller="MainController">
+
+
+
+    <div class="container">
+        <h1>Tu</h1>
+        <h2>{{tu}}</h2>
+
+
+        <button class="choose card" ng-click="morra(1)"></button>
+
+        <button class="choose rock" ng-click="morra(2)"></button>
+
+        <button class="choose scissors" ng-click="morra(3)"></button>
+
+        <h1>Computer</h1>
+        <h2>{{computer}}</h2>
+
+
+    </div>
+</section>
+{% endraw %}
+{% endblock %}
